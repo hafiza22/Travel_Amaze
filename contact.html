@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRAVEL_AMAZE</title>
+  <link rel="shortcut icon" href="/static/img/logo.jpg">
+  <link rel="stylesheet" href="./home.css">
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./static/img/logo.jpg" class="h-8" alt="Flowbite Logo">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Travel_Amaze</span>
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"><a href="./index.html">Logout</a></button>
+        </a>
+    </div>
+  </nav>
+  
+  <!-- Main section -->
+  <main class="mt-10">
+    <section class="contact">
+      <form action="#" >
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="submit-button">Send Message</button>
+      </form>
+    </section>
+    
+    <section class="testimonials">
+      <h2>What Our Clients Say</h2>
+      <div class="testimonial-items">
+        <div class="testimonial-item">
+          <p>"Travel_Amaze leaves you speechless. Then turns you into storyteller!!!"</p>
+          <h3>- Client-1</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"Fill your life with joy with Travel_amaze!!!"</p>
+          <h3>- Client-2</h3>
+        </div>
+        <div class="testimonial-item">
+          <p>"A journey of a thousand miles of happiness brgins with Travel_Amaze"</p>
+          <h3>- Client-4</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="fixed bottom-0 left-0 z-20 w-full p-4 bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 dark:border-gray-600">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">TRAVEL_AMAZE</a> All Rights Reserved.
+    </span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+</body>
+</html>
