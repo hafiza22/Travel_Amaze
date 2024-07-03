@@ -1,0 +1,53 @@
+version: '3.0'
+intents:
+- ask_info
+- ask_question
+- ask_tourist_spots
+- goodbye
+- greet
+- location
+- search_place
+entities:
+- location
+- tourist_attraction
+- type
+slots:
+  tourist_attraction:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: tourist_attraction
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: location
+  type:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: type
+responses:
+  utter_greet:
+  - text: Hello! How can I help you today?
+  utter_goodbye:
+  - text: Goodbye! Have a great day!
+  utter_ask_tourist_attraction:
+  - text: Which tourist attraction would you like to know about?
+  utter_ask_location:
+  - text: Where would you like to search?
+actions:
+- action_fetch_tourist_spots
+- utter_greet
+- action_get_ai_response
+- action_tourist_info
+- action_search_place
+forms:
+  tourist_info_form:
+    required_slots:
+    - tourist_attraction
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,64 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey
+    - Hi there
+    - Hey there
+    - Hello there
+    - hi
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye
+    - See you later
+    - Bye bye
+    - Talk to you later
+- intent: ask_info
+  examples: |
+    - Tell me about [Eiffel Tower](tourist_attraction)
+    - I want to know about [Statue of Liberty](tourist_attraction)
+    - Give me information on [Colosseum](tourist_attraction)
+    - What can you tell me about [Big Ben](tourist_attraction)
+    - I need details about [Louvre Museum](tourist_attraction)
+    - Can you provide info on [Taj Mahal](tourist_attraction)
+    - Tell me about [Statue of Liberty](tourist_attraction)
+- intent: search_place
+  examples: |
+    - Find a [restaurant](type) near [Central Park](location)
+    - Show me a [hotel](type) around [Times Square](location)
+    - I need a [cafe](type) close to [Union Square](location)
+    - Can you find a [gym](type) near [Wall Street](location)
+    - can you find a [restaurant](type) near [Central Prak](location)?
+    - i need a [cafe](type) close to [union square]{"entity": "location", "value": "Union Square"}
+    - show me a [hotel](type) around one town
+    - i need a [cafe](type) close to bsent road
+- intent: ask_tourist_spots
+  examples: |
+    - What are the tourist spots in [New York](location)?
+    - Tell me about tourist attractions in [Paris](location).
+    - Show me tourist spots in [Tokyo](location).
+    - What can I see in [Berlin](location)?
+    - What are the tourist spots in [New York](location)
+    - [New York](location)
+- intent: ask_question
+  examples: |
+    - [What are the top tourist attractions in New York?](question)
+    - [Can you recommend some good restaurants near Eiffel Tower?](question)
+    - [What's the best time to visit Eiffel Tower?](question)
+    - [How do I get to Statue of Liberty from New York Harber?](question)
+    - [Tell me about the weather forecast for Paris next week.](question)
+    - [What are some popular activities to do in Tokyo?](question)
+    - [Are there any special events or festivals happening in India soon?](question)
+    - [Could you suggest a hotel or accommodation option in Seoul?](question)
+    - [Do you have any information about Ajantha Caves?](question)
+    - [Can you provide tips for traveling to Louvre Museum?](question)
+    - What are the top tourist attractions in [New York](location)?
+    - Can you provide simple tips for traveling to Louvre Museum?
+    - What are the top tourist attractions in [New York](location)?
+    - How do I get to Statue of Liberty from New York Harber?
+- synonym: Union Square
+  examples: |
+    - union square

@@ -1,0 +1,55 @@
+version: "3.0"
+
+stories:
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: goodbye user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story:  ask_for_query
+  steps:
+  - intent: greet
+  - action: utter_ask_tourist_attraction
+
+- story: provide information via form
+  steps:
+  - intent: ask_info
+  - action: tourist_info_form
+  - active_loop: tourist_info_form
+  - active_loop: null
+  - action: action_tourist_info
+
+- story: ask for assistance
+  steps:
+  - intent: search_place
+  - action: action_search_place
+
+- story: fetch tourist spots
+  steps:
+  - intent: ask_tourist_spots
+    entities:
+    - location: "New York"
+  - action: action_fetch_tourist_spots
+
+- story: ask AI question
+  steps:
+  - intent: ask_question
+  - action: action_get_ai_response
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_question
+    entities:
+    - location: New York
+  - slot_was_set:
+    - location: New York
+  - action: action_fetch_tourist_spots
+  - intent: ask_question
+  - action: action_get_ai_response
